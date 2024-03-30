@@ -1,18 +1,18 @@
 .floating-search-bar {
-    top: 20px;
-    right: 20px;
     padding: 10px;
     margin-left: 48px;
     margin-right: 48px;
     margin-top: -16px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    position: relative;
     z-index: 1000;
 }
 
 .floating-search-bar-input {
     width: 100%;
     border-radius: 2px;
+    font-size: 14px;
 }
 
 .floating-search-bar form {
@@ -36,6 +36,7 @@
     border-radius: 2px;
     cursor: pointer;
     font-family: 'Muli', sans-serif;
+    font-size: 12px;
 }
 
 .floating-search-bar button:hover {
