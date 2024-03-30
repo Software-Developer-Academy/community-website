@@ -11,7 +11,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-text">
                 <p>Software Developer Academy Pro</p>
-                <h1>Members' Index</h1>
+                <h4>Members' Index</h4>
             </div>
         </nav>
     );
