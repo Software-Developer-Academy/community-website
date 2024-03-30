@@ -18,6 +18,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
 
     /* Paths */
     "baseUrl": "./src",
