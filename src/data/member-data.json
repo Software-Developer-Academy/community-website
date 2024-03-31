@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Kenny Gunderman",
+    "picture": "./assests/profile-pics/kenny-profile-pic-1024x1024.png",
+    "skoolHandle": "@kenneth-gunderman-1771",
+    "age": 28,
+    "timezone": "EST",
+    "description": "Software Engineer, Tech YouTuber and Admin of Software Developer Academy",
+    "skills": [
+      "Mobile Dev",
+      "TypeScript",
+      "React-Native",
+      "Kotlin"
+    ],
+    "links": [
+      {
+        "name": "Skool Profile",
+        "url": "https://www.skool.com/john"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/john"
+      },
+      {
+        "name": "GitHub",
+        "url": "github.com"
+      }
+    ]
+  }
+]
