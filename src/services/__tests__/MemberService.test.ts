@@ -18,7 +18,7 @@ describe('MemberService', () => {
             expect(member).toHaveProperty('links');
 
             expect(member.description.length).toBeLessThan(300);
-            if (member.skoolHandle !== "@kenneth-gunderman-1771" || member.skoolHandle !== "@kevin-naughton-6281") {
+            if (member.skoolHandle !== "@kenneth-gunderman-1771" && member.skoolHandle !== "@kevin-naughton-6281") {
                 expect(member.role === 'Software Developer' || member.role === 'Student').toBeTruthy();
             }
 

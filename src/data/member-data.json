@@ -5,7 +5,7 @@
     "skoolHandle": "@kenneth-gunderman-1771",
     "age": 28,
     "role": "Admin",
-    "timezone": "EST",
+    "timezone": "ET",
     "description": "Software Engineer, Tech YouTuber and Admin of Software Developer Academy.",
     "skills": [
       "Mobile Dev",
@@ -25,6 +25,33 @@
       {
         "name": "GitHub",
         "url": "https://github.com/Kennygunderman"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Naughton Jr.",
+    "picture": "kevin-naughton-jr-profile-pic-1024x1024.png",
+    "skoolHandle": "@kevin-naughton-6281",
+    "age": 29,
+    "role": "Admin",
+    "timezone": "ET",
+    "description": "Big Tech Software Engineer, Tech YouTuber and Admin of Software Developer Academy.",
+    "skills": [
+      "Backend Dev",
+      "Java"
+    ],
+    "links": [
+      {
+        "name": "Member Profile",
+        "url": "https://www.skool.com/software-developer-academy-pro/member-profile-kevin-naughton-jr"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kevindnaughtonjr/"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/kdn251"
       }
     ]
   }
