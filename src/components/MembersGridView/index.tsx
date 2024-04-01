@@ -8,25 +8,22 @@ import membersService, { Member } from "../../services/MemberService";
 
 const GridView = () => {
     const members = membersService.getMembers();
-    console.log(members);
 
     const card = (member: Member) => {
         return (
             <div key={0} className="card">
                 <div className="card-header">
-                    <img src={member.picture} alt={member.name} className="profile-pic"/>
+                    <img src={'/community-website/profile-pics/' + member.picture} alt={member.name} className="profile-pic"/>
                     <div>
                         <div className="card-name">{member.name}</div>
-                        <div className="card-tagline">{member.age}, Student, EST</div>
+                        <div className="card-tagline">{member.age}, {member.role}, EST</div>
                     </div>
                 </div>
                 <div className="card-body">
                     <p className="card-desc">{member.description}</p>
                     <div className="card-chips">
-                        <div className="card-chip">Mobile Dev</div>
-                        <div className="card-chip">TypeScript</div>
-                        {/*<a href={member.links.linkedin} className="card-chip">LinkedIn</a>*/}
-                        {/*<a href={member.links.instagram} className="card-chip">Skool Profile</a>*/}
+                        {member.skills.map((skill) => <div className="card-chip">{skill}</div>)}
+                        {member.links.map((link) => <a href={link.url} className="card-chip">{link.name}</a>)}
                     </div>
                 </div>
             </div>

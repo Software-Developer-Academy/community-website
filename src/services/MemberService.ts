@@ -1,9 +1,9 @@
-import fs from 'fs';
-import path from 'path';
+import memberData from './../data/member-data.json';
+
 
 interface MemberLink {
     name: string;
-    link: string;
+    url: string;
 }
 
 export interface Member {
@@ -11,6 +11,7 @@ export interface Member {
     picture: string;
     skoolHandle: string;
     age: number;
+    role: 'Admin' | 'Software Developer' | 'Student'
     timezone: string;
     description: string;
     skills: string[];
@@ -19,18 +20,7 @@ export interface Member {
 
 class MemberService {
     public getMembers(): Member[] {
-        const filePath = path.join(__dirname, '..', 'data', 'member-data.json');
-
-        try {
-            // Synchronously read the file
-            const rawData = fs.readFileSync(filePath, { encoding: 'utf8' });
-
-            // Parse the JSON data
-            return JSON.parse(rawData);
-        } catch (error) {
-            console.error('Error reading the JSON file:', error);
-            return [];
-        }
+        return memberData;
     }
 }
 
