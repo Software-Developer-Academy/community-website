@@ -11,7 +11,7 @@ export interface Member {
     picture: string;
     skoolHandle: string;
     age: number;
-    role: 'Admin' | 'Software Developer' | 'Student'
+    role: string;
     timezone: string;
     description: string;
     skills: string[];
