@@ -10,7 +10,6 @@
     border: 1px solid rgba(204, 204, 204, 0.2);
     border-radius: 3px;
     box-sizing: border-box;
-    margin-top: 8px;
     margin-bottom: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Muli', sans-serif;
@@ -65,5 +64,11 @@
     font-size: 12px;
     color: rgb(39, 58, 119);
     background-color: rgba(39, 58, 119, 0.2);
+    font-family: 'Muli', sans-serif;
+}
+
+.member-count {
+    color: #7f7f7f;
+    font-size: 16px;
     font-family: 'Muli', sans-serif;
 }

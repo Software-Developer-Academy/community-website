@@ -38,7 +38,7 @@ describe('MemberService', () => {
     });
 
     test('getMembers filters members by name', () => {
-        const members = membersService.getMembers('Kenny');
+        const members = membersService.getMembers('Kenny Gunderman');
         expect(members.length).toBe(1);
         expect(members[0].name).toBe('Kenny Gunderman');
     });

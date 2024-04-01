@@ -16,7 +16,8 @@ const GridView = (props: Props) => {
         return (
             <div key={0} className="card">
                 <div className="card-header">
-                    <img src={'/community-website/profile-pics/' + member.picture} alt={member.name} className="profile-pic"/>
+                    <img src={'/community-website/profile-pics/' + member.picture} alt={member.name}
+                         className="profile-pic"/>
                     <div>
                         <div className="card-name">{member.name}</div>
                         <div className="card-tagline">{member.age}, {member.role}, EST</div>
@@ -34,15 +35,18 @@ const GridView = (props: Props) => {
     }
 
     return (
-        <Container fluid={"xs"} className="grid-container">
-            <Row>
-                {members.map((member) =>
-                    <Col key={member.skoolHandle} md={6} lg={4}>
-                        {card(member)}
-                    </Col>
-                )}
-            </Row>
-        </Container>
+        <div>
+            <Container fluid={"xs"} className="grid-container">
+                <p className="member-count">{'Results: ' + members.length}</p>
+                <Row>
+                    {members.map((member) =>
+                        <Col key={member.skoolHandle} md={6} lg={4}>
+                            {card(member)}
+                        </Col>
+                    )}
+                </Row>
+            </Container>
+        </div>
     );
 };
 
