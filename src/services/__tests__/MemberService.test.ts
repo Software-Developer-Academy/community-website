@@ -1,4 +1,5 @@
 import membersService from "../MemberService";
+import memberData from "../../data/member-data.json";
 
 describe('MemberService', () => {
     // Each member should include: name, skoolHandle, age, role, timezone, description, skills, and links
@@ -24,5 +25,21 @@ describe('MemberService', () => {
             const hasSkoolProfileLink = member.links.find((link) => link.name === 'Member Profile');
             expect(hasSkoolProfileLink).toBeTruthy();
         });
+    });
+
+    test('getMembers returns all members when no filter is provided', () => {
+        const members = membersService.getMembers();
+        expect(members.length).toBe(memberData.length);
+    });
+
+    test('getMembers returns all members when an empty filter is provided', () => {
+        const members = membersService.getMembers('');
+        expect(members.length).toBe(memberData.length);
+    });
+
+    test('getMembers filters members by name', () => {
+        const members = membersService.getMembers('Kenny');
+        expect(members.length).toBe(1);
+        expect(members[0].name).toBe('Kenny Gunderman');
     });
 });

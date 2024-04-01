@@ -6,9 +6,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import membersService, { Member } from "../../services/MemberService";
 
-const GridView = () => {
-    const members = membersService.getMembers();
+interface Props {
+    members: Member[];
+}
 
+const GridView = (props: Props) => {
+    const { members } = props;
     const card = (member: Member) => {
         return (
             <div key={0} className="card">
@@ -34,7 +37,7 @@ const GridView = () => {
         <Container fluid={"xs"} className="grid-container">
             <Row>
                 {members.map((member) =>
-                    <Col md={6} lg={4}>
+                    <Col key={member.skoolHandle} md={6} lg={4}>
                         {card(member)}
                     </Col>
                 )}

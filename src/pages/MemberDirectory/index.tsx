@@ -1,15 +1,23 @@
 //@ts-ignore
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Navbar from "@components/Navbar";
 import FloatingSearchBar from "@components/FloatingSearchBar";
 import MembersGridView from "@components/MembersGridView";
+import membersService from "../../services/MemberService";
 
 function MemberDirectoryPage() {
+    const [members, setMembers] = useState([]);
+    const [filter, setFilter] = useState('');
+
+    useEffect(() => {
+        setMembers(membersService.getMembers(filter));
+    }, [filter]);
+
     return (
         <div>
             <Navbar/>
-            <FloatingSearchBar />
-            <MembersGridView />
+            <FloatingSearchBar onSearch={(searchText) => setFilter(searchText)} />
+            <MembersGridView members={members}/>
         </div>
     );
 }

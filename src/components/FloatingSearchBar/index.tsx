@@ -5,7 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import './styles.css';
 
 interface Props {
-    onSearch?: (searchText: string) => void;
+    onSearch: (searchText: string) => void;
 }
 
 const FloatingSearchBar = (props: Props) => {
@@ -13,25 +13,25 @@ const FloatingSearchBar = (props: Props) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearch = () => {
-        onSearch?.(searchTerm);
+        onSearch(searchTerm);
         console.log('Searching for:', searchTerm);
     };
 
     return (
         <div className="floating-search-bar" data-testid="floating-search-bar">
-            <form onSubmit={handleSearch} className="search-form">
+            <div className="search-form">
                 <div className="search-icon-divider">
                     <FontAwesomeIcon className="search-icon" icon={faSearch} />
                 </div>
                 <input
                     className="floating-search-bar-input"
                     type="text"
-                    placeholder="Search Members..."
+                    placeholder="Search Members by Name..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button type="submit">Search</button>
-            </form>
+                <button onClick={handleSearch}>Search</button>
+            </div>
         </div>
     );
 };
