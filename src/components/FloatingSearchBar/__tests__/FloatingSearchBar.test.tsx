@@ -15,7 +15,7 @@ describe('FloatingSearchBar', () => {
         const handleSearchMock = jest.fn();
         render(<FloatingSearchBar onSearch={handleSearchMock} />);
 
-        const input = screen.getByPlaceholderText('Search Members by Name...');
+        const input = screen.getByPlaceholderText('Search Members by Name...') as HTMLInputElement;
         fireEvent.change(input, { target: { value: 'test search' } });
         const button = screen.getByText('Search');
         fireEvent.click(button);
@@ -25,7 +25,7 @@ describe('FloatingSearchBar', () => {
     test('updates input value when typing', () => {
         render(<FloatingSearchBar onSearch={() => {}} />);
 
-        const input = screen.getByPlaceholderText('Search Members by Name...');
+        const input = screen.getByPlaceholderText('Search Members by Name...') as HTMLInputElement;
         fireEvent.change(input, { target: { value: 'Test Member' } });
 
         expect(input.value).toBe('Test Member');
