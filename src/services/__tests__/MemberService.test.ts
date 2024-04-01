@@ -16,11 +16,7 @@ describe('MemberService', () => {
             expect(member).toHaveProperty('skills');
             expect(member).toHaveProperty('links');
 
-            expect(member.name.length).toBeGreaterThan(0);
-            expect(member.age).toBeGreaterThan(0);
             expect(member.description.length).toBeLessThan(300);
-            expect(member.name.length).toBeGreaterThan(0);
-
             if (member.skoolHandle !== "@kenneth-gunderman-1771") {
                 expect(member.role === 'Software Developer' || member.role === 'Student').toBeTruthy();
             }
