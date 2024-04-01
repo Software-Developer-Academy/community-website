@@ -1,4 +1,5 @@
-import React from "react"
+//@ts-ignore
+import React from 'react';
 import './styles.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -24,8 +25,8 @@ const GridView = (props: Props) => {
                 <div className="card-body">
                     <p className="card-desc">{member.description}</p>
                     <div className="card-chips">
-                        {member.skills.map((skill) => <div className="card-chip">{skill}</div>)}
-                        {member.links.map((link) => <a href={link.url} className="card-chip">{link.name}</a>)}
+                        {member.skills.map((skill) => <div key={skill} className="card-chip">{skill}</div>)}
+                        {member.links.map((link) => <a key={link.name} href={link.url} className="card-chip">{link.name}</a>)}
                     </div>
                 </div>
             </div>

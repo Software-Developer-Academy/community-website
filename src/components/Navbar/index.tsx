@@ -1,4 +1,5 @@
-import React from "react"
+//@ts-ignore
+import React from 'react';
 import logoImage from '@assets/logo/sda-pro-logo-1024x1024.png';
 import './styles.css';
 
