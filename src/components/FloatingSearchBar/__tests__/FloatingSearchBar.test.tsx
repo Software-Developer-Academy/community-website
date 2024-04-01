@@ -1,4 +1,3 @@
-//@ts-ignore
 import React from "react"
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -28,7 +27,6 @@ describe('FloatingSearchBar', () => {
         const input = screen.getByPlaceholderText('Search Members by Name...');
         fireEvent.change(input, { target: { value: 'Test Member' } });
 
-        // @ts-ignore
         expect(input.value).toBe('Test Member');
     });
 });

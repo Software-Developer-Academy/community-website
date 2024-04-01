@@ -1,12 +1,11 @@
-//@ts-ignore
 import React, { useEffect, useState } from "react"
 import Navbar from "@components/Navbar";
 import FloatingSearchBar from "@components/FloatingSearchBar";
 import MembersGridView from "@components/MembersGridView";
-import membersService from "../../services/MemberService";
+import membersService, { Member } from "../../services/MemberService";
 
 function MemberDirectoryPage() {
-    const [members, setMembers] = useState([]);
+    const [members, setMembers] = useState<Member[]>([]);
     const [filter, setFilter] = useState('');
 
     useEffect(() => {
