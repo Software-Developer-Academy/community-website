@@ -1,6 +1,5 @@
 import memberData from './../data/member-data.json';
 
-
 interface MemberLink {
     name: string;
     url: string;
@@ -28,7 +27,6 @@ class MemberService {
         }
     }
 }
-
 
 const membersService = new MemberService();
 export default membersService;
