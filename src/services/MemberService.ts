@@ -19,8 +19,13 @@ export interface Member {
 }
 
 class MemberService {
-    public getMembers(): Member[] {
-        return memberData;
+    public getMembers(nameFilter?: string): Member[] {
+        const members = memberData;
+        if (!nameFilter || nameFilter === '') {
+            return members;
+        } else {
+            return members.filter((member) => member.name.includes(nameFilter));
+        }
     }
 }
 
