@@ -26,7 +26,7 @@ const FloatingSearchBar = (props: Props) => {
                 <input
                     className="floating-search-bar-input"
                     type="text"
-                    placeholder="Search Members..."
+                    placeholder="Search Members by Name..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
