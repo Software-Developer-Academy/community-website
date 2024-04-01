@@ -1,3 +1,4 @@
+//@ts-ignore
 import React from 'react';
 import { render } from '@testing-library/react';
 import GridView from '../index';
@@ -68,7 +69,7 @@ describe('GridView', () => {
         expect(name?.textContent).toBe('John Doe');
         expect(tagline?.textContent).toBe('25, Software Engineer, EST');
         expect(desc?.textContent).toBe('A software engineer with 5 years of experience.');
-        expect(chips.length).toBe(3);
+        expect(chips?.length).toBe(3);
     });
 
     it('should render member count', () => {
