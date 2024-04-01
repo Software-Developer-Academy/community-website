@@ -4,7 +4,7 @@ import './styles.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import membersService, { Member } from "../../services/MemberService";
+import { Member } from "../../services/MemberService";
 
 interface Props {
     members: Member[];
