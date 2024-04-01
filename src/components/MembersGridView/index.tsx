@@ -16,8 +16,10 @@ const GridView = (props: Props) => {
         return (
             <div key={0} className="card">
                 <div className="card-header">
-                    <img src={'/community-website/profile-pics/' + member.picture} alt={member.name}
-                         className="profile-pic"/>
+                    <img
+                        style={{ objectFit: 'cover' }}
+                        src={'/community-website/profile-pics/' + member.picture} alt={member.name}
+                        className="profile-pic"/>
                     <div>
                         <div className="card-name">{member.name}</div>
                         <div className="card-tagline">{member.age}, {member.role}, EST</div>
