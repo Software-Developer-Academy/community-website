@@ -3,7 +3,7 @@ import membersService from "../MemberService";
 describe('MemberService', () => {
     // Each member should include: name, skoolHandle, age, role, timezone, description, skills, and links
     // links should contain at a minimum a link to the Skool Profile
-    test('getMembers are members valid', () => {
+    test('getMembers contains valid members', () => {
         const members = membersService.getMembers();
         members.forEach((member) => {
             expect(member).toHaveProperty('name');
